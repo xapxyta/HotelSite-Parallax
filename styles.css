@@ -1,0 +1,638 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/************************************ NAVIGATION ********************************************************/
+
+nav {
+    background: black;
+    height: 65px;
+    /* width: calc(100% - 17px); */
+    width: 100%;
+    z-index: 11;
+    /* position: fixed; */
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    font-family: 'Crimson Pro', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+a:visited {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darkgray;
+}
+
+.icon-menu {
+    display: none;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+/************************************* HEADER **********************************************************/
+
+.header-picture {
+    background: url("images/header-picture.png") no-repeat center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.block1 {
+    background: black;
+    height: 350px;
+    width: 350px;
+    color: white;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headline {
+    font-family: 'Crimson Pro', serif;
+    font-size: 7rem;
+    font-weight: 300;
+}
+
+.subheadline {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+/************************************ INCLUDED ****************************************************/
+
+.included {
+    background: white;
+    text-align: center;
+    width: 100vw;
+}
+
+.included-blocks {
+    display: flex;
+    justify-content: center;
+}
+
+.included h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+.included-block {
+    width: 25%;
+    text-align: left;
+    margin: 50px;
+    font-size: 1.5rem;
+}
+
+.included-block h3 {
+    font-weight: 500;
+}
+
+.included-block img {
+    width: 100%;
+}
+
+.included-block-bottom {
+    border: 10px solid black;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto; 
+    text-align: left;
+    font-size: 1rem;
+}
+
+/************************************* INFO ******************************************************/
+
+.info {
+    background: black;
+    text-align: center;
+    width: 100vw;
+}
+
+.info-blocks {
+    width: 240vw;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+}
+
+.info h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+.info-block {
+    background: white;
+    text-align: left;
+    width: 30vw;
+    margin: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    scroll-snap-align: start;
+}
+
+.info-block h3 {
+    font-weight: 500;
+}
+
+.info-block img {
+    width: 100%;
+}
+
+.info-block ul {
+    list-style-type: none;
+}
+
+.info-blocks button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 100%;
+    color: white;
+    background: black;
+}
+
+.info-blocks button:hover {
+    color: white;
+    background: gray;
+}
+
+.info-blocks button:active {
+    width: 98%;
+    color: black;
+    background: darkgray;
+}
+
+.info-headline {
+    color: white;
+}
+
+/************************************* FORM ******************************************************/
+
+.form {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    "headline headline"
+    "name quantity"
+    "phone time"
+    "email date"
+    "message message"
+    "checkbox checkbox"
+    "button button";
+    margin: 0 auto;
+    background: black;
+}
+
+#form-headline {
+    color: white;
+    grid-area: headline;
+    text-align: center;
+    margin: 20px;
+}
+
+#form-phone {
+    grid-area: phone;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+#form-email {
+    grid-area: email;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+#form-name {
+    grid-area: name;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+#form-quantity {
+    grid-area: quantity;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+#form-time {
+    grid-area: time;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+#form-date {
+    grid-area: date;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+#form-message {
+    grid-area: message;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+    resize: inherit;
+}
+
+#form-checkbox {
+    grid-area: checkbox;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+#form-checkbox p {
+    display: inline-block;
+    margin-left: 10px;
+    color: white;
+}
+
+#form-button {
+    grid-area: button;
+    margin: 20px;
+    padding: 10px;
+    background: white;
+    font-size: 1.5rem;
+}
+
+#form-button:hover {
+    background: gray;
+}
+
+#form-button:active {
+    color: white;
+    background: darkgray;
+}
+
+/************************************** FOOTER **********************************************************/
+
+.footer-picture {
+    background: url("images/footer-picture.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.block-footer {
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.footer-subline {
+    margin: 10px;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    font-size: 4rem;
+}
+
+.social-icon {
+    margin: 10px;
+    color: black;
+}
+
+.social-icon:hover {
+    color: white;
+}
+
+/* .headline {
+    font-family: 'Crimson Pro', serif;
+    font-size: 7rem;
+    font-weight: 300;
+}
+
+.subheadline {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+} */
+
+.copyright {
+    position: absolute;
+    bottom: -15px;
+    height: 65px;
+    width: 100vw;
+    background: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/************************************** PARALLAX ********************************************************/
+
+.parallax {
+    height: 500px;
+    height: calc(100vh - 65px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    /* perspective-origin-x: 100%; */
+    /* -ms-perspective-origin-x: 100%; */
+    /* -webkit-perspective-origin-x: 100%; */
+}
+
+.parallax__group {
+    position: relative;
+    height: 500px;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* transform-origin-x: 100%; */
+    /* -ms-transform-origin-x: 100%; */
+    /* -webkit-transform-origin-x: 100%; */
+}
+
+.parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+}
+
+.parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+}
+
+.parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+}
+
+.parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+}
+
+body, html {
+    overflow: hidden;
+}
+
+/* body {
+    font: 100% / 1.5 Arial;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* .parallax {
+    font-size: 200%;
+} */
+
+/* .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+} */
+
+/* #group1 {
+    z-index: 3;
+} */
+
+/* #group1 .parallax__layer--back {
+    background: url("images/header-picture.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}*/
+
+#group2 {
+    height: 130vh;
+    z-index: 4;
+}
+
+/*#group2 .parallax__layer--base {
+    background: url("images/header-picture.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}*/
+
+#group3 {
+    z-index: 3;
+}
+
+/*#group3 .parallax__layer--base {
+    background: url("images/header-picture.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}*/
+
+#group4 {
+    z-index: 4;
+}
+
+#group4 .parallax__layer--back {
+    z-index: 2;
+}
+
+/*#group5 {
+    z-index: 3;
+}
+
+#group5 .parallax__layer--base {
+    background: rgb(214, 229, 100);
+}
+
+#group6 {
+    z-index: 2;
+}
+
+#group6 .parallax__layer--back {
+    background: rgb(245, 235, 100);
+}
+
+#group7 {
+    z-index: 3;
+}
+
+#group7 .parallax__layer--base {
+    background: rgb(255, 241, 100);
+} */
+
+
+
+/********************************************* CHECK LAYERS *************************************************/
+
+/* .parallax__group {
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+  } */
+
+/******************************************** SCROLL OVERFLOW X *********************************************/
+
+.container {
+    display: flex;
+    overflow: auto;
+  }
+  
+  .container.x {
+    width: 90%;
+    margin: 0 auto;
+    flex-flow: row nowrap;
+  }
+  
+  .x.mandatory-scroll-snapping {
+    scroll-snap-type: x mandatory;
+  }
+  
+  .y.mandatory-scroll-snapping {
+    scroll-snap-type: y mandatory;
+  }
+  
+  .x.proximity-scroll-snapping {
+    scroll-snap-type: x proximity;
+  }
+  
+  .y.proximity-scroll-snapping {
+    scroll-snap-type: y proximity;
+  }
+  
+  .container > div {
+    scroll-snap-align: center;
+    flex: none;
+  }
+  
+  .x.container > div {
+    width: 30%;
+  }
+  
+  .y.container > div {
+    line-height: 256px;
+    font-size: 128px;
+    width: 256px;
+  }
+
+/**************************************** RESPONSIVE *********************************************/
+
+@media only screen and (max-width: 768px) {
+
+    nav a {
+        display: none;
+    }
+
+    .icon-menu {
+        display: inline-block;
+    }
+
+    nav:hover .nav-mobile {
+        display: inline-block;
+        background: black;
+        position: absolute;
+        right: 5%;
+        width: 90%;
+    }
+
+    #form {
+        width: 90vw;
+    }
+
+  }
+
+  @media only screen and (max-width: 1024px) {
+
+    #group3 {
+        margin-bottom: 100px;
+    }
+
+  }
